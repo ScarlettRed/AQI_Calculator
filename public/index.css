@@ -1,13 +1,16 @@
 
 body{
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 label {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 input {
     border-radius: 5px;
+    height: 2.2em;
+    box-shadow: 2px 2px #eeeeee;
 }
 select {
     border-radius: 2px;
