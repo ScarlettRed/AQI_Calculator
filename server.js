@@ -10,7 +10,7 @@ app.use(express.static(__dirname + "/public"));
 
 
 app.get ('/', (req, res) => {
-    res.render('home', {value: null, verified: "false", cat: null});
+    res.render('home', {value: null, visited: "false", cat: null});
 });
 
 app.post('/', (req, res) => {
@@ -18,7 +18,7 @@ app.post('/', (req, res) => {
     var c = req.body.category;
     var r = calculate(i, c);
     var cat = category(r);
-    res.render('home', {verified: "true", value: r, cat: cat});
+    res.render('home', {visited: "true", value: r, cat: cat});
 });
 
 app.listen(3000, process.env.IP, () => {

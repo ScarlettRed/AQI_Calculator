@@ -24,10 +24,9 @@
     <br>
     <label for="input" class="required">Value(ug/m<sup>3</sup>):</label>
     <input type="input" id="input" name="input">
-    <br>
-    <input type="submit" value="Calculate" class="btn btn-dark">
+    <input type="submit" value="Calculate" class="btn btn-sm btn-dark">
     </form>
-    <% if(verified=="true") { %>
+    <% if(visited=="true") { %>
         <div class ="subindex">
             <label>Sub-Index Value:</label>
             <%= value %>
