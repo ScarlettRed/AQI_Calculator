@@ -1,7 +1,7 @@
-.subindex {
-    visibility: hidden;
-    color: #000;
-}
+
 body{
 text-align: center;
+}
+label {
+    font-weight: 700;
 }

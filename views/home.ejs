@@ -20,20 +20,21 @@
         <option value="Pb">Pb</option>
     </select>
     <br>
-    <label for="value" class="required">Value(ug/m<sup>3</sup>)</label>
-    <input type="text" id="value" name="value">
+    <label for="input" class="required">Value(ug/m<sup>3</sup>)</label>
+    <input type="input" id="input" name="input">
     <br>
     <input type="submit" value="Calculate">
     </form>
     </body>
     <% if(verified=="true") { %>
-    <div class ="subindex">
-        <label for="subindex">Sub-Index Value:</label>
-        <input type="text" class="subindex" id="subindex" >
-       <% } %>
         <div class ="subindex">
-        <label for="subindex">Sub-Index Value:</label>
+        <label>Sub-Index Value:</label>
         <%= value %>
+        <br>
+        <label>Category:</label>
+        <%= cat %>
+       <% } %>
     </div>
     <br>
+    <img src="chart.jpg" alt="">
 </html>
