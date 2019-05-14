@@ -1,7 +1,14 @@
 
 body{
-text-align: center;
+    text-align: center;
 }
 label {
     font-weight: 700;
+}
+
+input {
+    border-radius: 2px;
+}
+select {
+    border-radius: 2px;
 }
