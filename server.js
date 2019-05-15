@@ -10,15 +10,16 @@ app.use(express.static(__dirname + "/public"));
 
 
 app.get ('/', (req, res) => {
-    res.render('home', {value: null, visited: "false", cat: null});
+    res.render('home', {value: null, visited: "false", cat: null, name: null});
 });
 
 app.post('/', (req, res) => {
+    console.log(req.body);
     var i = req.body.input;
     var c = req.body.category;
     var r = calculate(i, c);
     var cat = category(r);
-    res.render('home', {visited: "true", value: r, cat: cat});
+    res.render('home', {visited: "true", value: r, cat: cat, name: c});
 });
 
 app.listen(3000, process.env.IP, () => {
@@ -28,9 +29,8 @@ app.listen(3000, process.env.IP, () => {
 function calculate(i,c) {
     i = parseFloat(i, 10); 
     var il, ih, cl, ch;
-   if(c == "pm10")
+   if(c == "PM10")
    {
-       console.log("yuu")
        if(i >= 0 && i <= 50)
        {
            il = 0;
@@ -69,7 +69,7 @@ function calculate(i,c) {
            ch = 500;
        }
    }
-   if(c == "pm2.5")
+   if(c == "PM2.5")
    {
        if(i >= 0 && i <= 30)
        {
@@ -262,7 +262,7 @@ function calculate(i,c) {
            cl = 801;
            ch = 1600;
        }
-       if (i >= ih1601) {
+       if (i >= 1601) {
            il = 401;
            ih = 500;
            cl = 1601;
@@ -350,7 +350,6 @@ function calculate(i,c) {
        }
    }
     var r = ((ih - il)*(i - cl)/(ch-cl)) + il;
-    console.log(r);
     return Math.ceil(r, 10); r
 };
 

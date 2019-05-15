@@ -3,13 +3,24 @@ body{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-label {
-    font-weight: 600;
+div {
+    font-size: 12px;
 }
 
+label {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+select {
+    font-size: 12px;
+    padding: 0.2em;
+    box-shadow: 2px 2px #eeeeee;
+}
 input {
+    font-size: 12px;
     border-radius: 5px;
-    height: 2.2em;
+    height: 2.3em;
     box-shadow: 2px 2px #eeeeee;
 }
 select {

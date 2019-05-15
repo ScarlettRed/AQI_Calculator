@@ -13,22 +13,25 @@
      <form action="/" method = "POST">
     <label for="category">Pollutant: </label>
         <select name="category" id="category">
-        <option value="pm10">PM10</option>
-        <option value="pm2.5">PM2</option>
-        <option value="NO2">NO2</option>
-        <option value="03">O3</option>
-        <option value="CO">CO</option>
-        <option value="SO2">SO2</option>
-        <option value="NH3">NH3</option>
-        <option value="Pb">Pb</option>
+        <option value="PM10">PM10 (24 hr)</option>
+        <option value="PM2.5">PM2.5 (24 hr)</option>
+        <option value="NO2">NO2 (24 hr)</option>
+        <option value="O3">O3 (8 hr)</option>
+        <option value="CO">CO (8 hr)</option>
+        <option value="SO2">SO2 (24 hr)</option>
+        <option value="NH3">NH3 (24 hr)</option>
+        <option value="Pb">Pb (24 hr)</option>
     </select>
     <br>
-    <label for="input" class="required">Value(ug/m<sup>3</sup>):</label>
+    <label for="input" class="required">Value (&micro;g/m<sup>3</sup>):</label>
     <input type="input" id="input" name="input">
     <input type="submit" value="Calculate" class="btn btn-sm btn-dark">
     </form>
     <% if(visited=="true") { %>
         <div class ="subindex">
+            <label>Pollutant:</label>
+            <%= name %>
+            <br>
             <label>Sub-Index Value:</label>
             <%= value %>
             <br>
