@@ -27,7 +27,9 @@ app.listen(3000, process.env.IP, () => {
 });
 
 function calculate(i,c) {
+    console.log(i)
     i = parseFloat(i, 10); 
+    console.log(i)
     var il, ih, cl, ch;
    if(c == "PM10")
    {
@@ -350,7 +352,7 @@ function calculate(i,c) {
        }
    }
     var r = ((ih - il)*(i - cl)/(ch-cl)) + il;
-    return Math.ceil(r, 10); r
+    return Math.ceil(r, 10); 
 };
 
 function category(r)
