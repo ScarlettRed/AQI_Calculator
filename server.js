@@ -368,7 +368,7 @@ function category(r)
        cat = "Poor";
     if(r >= 301 && r <= 400)
        cat = "Very Poor";
-    if(r >= 401 && r <= 500)
+    if(r >= 401)
        cat = "Severe";
     return cat;
 
